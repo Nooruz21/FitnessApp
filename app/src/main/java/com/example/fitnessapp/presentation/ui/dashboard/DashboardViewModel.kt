@@ -1,4 +1,4 @@
-package com.example.fitnessapp.ui.dashboard
+package com.example.fitnessapp.presentation.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

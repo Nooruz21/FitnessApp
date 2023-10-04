@@ -1,4 +1,4 @@
-package com.example.fitnessapp.ui.notifications
+package com.example.fitnessapp.presentation.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater

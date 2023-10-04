@@ -1,4 +1,4 @@
-package com.example.fitnessapp.ui.dashboard
+package com.example.fitnessapp.presentation.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater

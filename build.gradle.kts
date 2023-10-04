@@ -9,5 +9,4 @@ plugins {
 
     // Hilt
     id(Plugins.Hilt.android) version Versions.dagger apply false
-    id("org.jetbrains.kotlin.jvm") version "1.9.0" apply false
 }
