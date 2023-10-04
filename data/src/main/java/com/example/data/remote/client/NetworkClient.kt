@@ -3,7 +3,7 @@ package com.example.data.remote.client
 import com.example.data.remote.apiservices.AuthenticatorApiService
 import com.example.data.remote.apiservices.FooApiService
 import com.example.data.remote.client.authenticator.TokenAuthenticator
-import com.alish.boilerplate.data.remote.client.interceptors.AuthorizationInterceptor
+import com.example.data.remote.client.interceptors.AuthorizationInterceptor
 import javax.inject.Inject
 
 class NetworkClient @Inject constructor(

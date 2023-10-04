@@ -7,19 +7,35 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.fitnessapp.presentation.ui.home.HomeFragment"
+        android:name="com.example.fitnessapp.presentation.ui.fragment.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.fitnessapp.presentation.ui.dashboard.DashboardFragment"
+        android:name="com.example.fitnessapp.presentation.ui.fragment.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.fitnessapp.presentation.ui.notifications.NotificationsFragment"
+        android:name="com.example.fitnessapp.presentation.ui.fragment.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <dialog
+        android:id="@+id/errorDialog"
+        android:name="com.example.fitnessapp.presentation.ui.dialog.error.ErrorDialog"
+        android:label="ErrorDialog"
+        tools:layout="@layout/dialog_error"/>
+
+    <action
+        android:id="@+id/action_global_dialogError"
+        app:destination="@id/errorDialog" >
+        <argument
+            android:name="titleError"
+            app:argType="string" />
+        <argument
+            android:name="descError"
+            app:argType="string" />
+    </action>
 </navigation>

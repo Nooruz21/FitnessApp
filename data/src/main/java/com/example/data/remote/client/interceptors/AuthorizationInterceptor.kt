@@ -1,6 +1,6 @@
-package com.alish.boilerplate.data.remote.client.interceptors
+package com.example.data.remote.client.interceptors
 
-import com.alish.boilerplate.data.local.preferences.PreferencesHelper
+import com.example.data.local.preferences.PreferencesHelper
 import okhttp3.Interceptor
 import okhttp3.Response
 import javax.inject.Inject

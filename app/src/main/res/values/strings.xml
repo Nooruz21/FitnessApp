@@ -3,4 +3,11 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!--region Errors-->
+    <string name="error">ошибка</string>
+    <string name="something_went_wrong">что то пошло не так!</string>
+    <string name="something_went_wrong_try_again">попробуйте чуть позже</string>
+    <string name="check_internet_connection">проверьте подключение к интернету</string>
+    <!--endregion-->
 </resources>
