@@ -1,54 +1,87 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.AGP.application)
+    kotlin(Plugins.Kotlin.android)
+    kotlin(Plugins.Kotlin.kapt)
+
+    // Navigation Safe Args
+    id(Plugins.Navigation.safeArgs)
+
+    // Hilt
+    id(Plugins.Hilt.android)
 }
 
 android {
-    namespace = "com.example.fitnessapp"
-    compileSdk = 33
+    namespace = Namespaces.app
+
+    compileSdk = AndroidConfig.compileSdk
 
     defaultConfig {
-        applicationId = "com.example.fitnessapp"
-        minSdk = 24
-        targetSdk = 33
+        applicationId = Namespaces.app
+        minSdk = AndroidConfig.minSdk
+        targetSdk = AndroidConfig.targetSdk
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-        release {
-            isMinifyEnabled = false
+        getByName(AndroidConfig.release) {
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+        getByName(AndroidConfig.debug) {
+            applicationIdSuffix = ".${AndroidConfig.debug}"
+            isDebuggable = true
+        }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Options.compileOptions
+        targetCompatibility = Options.compileOptions
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Options.kotlinOptions
     }
     buildFeatures {
+        buildConfig = true
         viewBinding = true
     }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.3")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.3")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(project(":data"))
+    implementation(project(":domain"))
+
+    // Kotlin
+    implementation(Libraries.Coroutines.android)
+
+    // UI Components
+    implementation(Libraries.UIComponents.material)
+    implementation(Libraries.UIComponents.constraintLayout)
+    implementation(Libraries.UIComponents.vbpd)
+
+    // Core
+    implementation(Libraries.Core.core)
+    implementation(Libraries.Core.splashscreen)
+
+    // Activity
+    implementation(Libraries.Activity.activity)
+
+    // Fragment
+    implementation(Libraries.Fragment.fragment)
+
+    // Lifecycle
+    implementation(Libraries.Lifecycle.viewModel)
+    implementation(Libraries.Lifecycle.runtime)
+
+    // Navigation
+    implementation(Libraries.Navigation.fragment)
+    implementation(Libraries.Navigation.ui)
+
+    // Hilt
+    implementation(Libraries.Hilt.android)
+    kapt(Libraries.Hilt.compiler)
 }
