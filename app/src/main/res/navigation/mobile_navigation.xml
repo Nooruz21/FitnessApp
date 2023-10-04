@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/boardFragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -26,16 +26,21 @@
         android:id="@+id/errorDialog"
         android:name="com.example.fitnessapp.presentation.ui.dialog.error.ErrorDialog"
         android:label="ErrorDialog"
-        tools:layout="@layout/dialog_error"/>
-
-    <action
-        android:id="@+id/action_global_dialogError"
-        app:destination="@id/errorDialog" >
+        tools:layout="@layout/dialog_error">
         <argument
             android:name="titleError"
             app:argType="string" />
         <argument
             android:name="descError"
             app:argType="string" />
-    </action>
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_dialogError"
+        app:destination="@id/errorDialog" />
+    <fragment
+        android:id="@+id/boardFragment"
+        android:name="com.example.fitnessapp.presentation.ui.fragment.board.BoardFragment"
+        android:label="fragment_board"
+        tools:layout="@layout/fragment_board" />
 </navigation>

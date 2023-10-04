@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_borad1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:text="Track Your Goal"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Don't worry if you have trouble determining your goals, We can help you determine your goals and track your goals"
+        android:textSize="20sp" />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_next"
+        android:layout_width="match_parent"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_right"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/purple_200"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" />-->
+</LinearLayout>

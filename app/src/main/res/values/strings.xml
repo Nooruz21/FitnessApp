@@ -9,5 +9,7 @@
     <string name="something_went_wrong">что то пошло не так!</string>
     <string name="something_went_wrong_try_again">попробуйте чуть позже</string>
     <string name="check_internet_connection">проверьте подключение к интернету</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--endregion-->
 </resources>
